@@ -1,23 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Axios from "axios";
 
-function Global({ globalInfo }) {
-  let cases = "0";
-  let deaths = "0";
-  let recovered = "0";
-  if (globalInfo !== undefined) {
-    deaths = globalInfo.deaths;
-    cases = globalInfo.cases;
-    recovered = globalInfo.recovered;
-  }
+const Global = () => {
+  const [globalState, setGlobalState] = useState({});
+  const [conectado, setConectado] = useState({ conectado: false });
+
+  useEffect(() => {
+    if (!conectado.conectado) {
+      const getInfo = async () => {
+        const url = " https://coronavirus-19-api.herokuapp.com/all";
+        const respuesta = await Axios.get(url);
+        const globalInfo = respuesta.data;
+        setGlobalState(globalInfo);
+        console.log(globalInfo);
+      };
+      getInfo();
+      setConectado({ conectado: true });
+    }
+  }, [conectado]);
+
   return (
     <div className="card-panel white col s12">
       <div className="black-text">
-        <h2>Numero de casos Global:{cases} </h2>
+        <h2>Numero de casos Global:{globalState.cases} </h2>
         <p className="cases"> </p>
-        <p> numero de muertes: {deaths} </p>
-        <p> numero de recuperados: {recovered} </p>
+        <p> numero de muertes: {globalState.deaths} </p>
+        <p> numero de recuperados: {globalState.recovered} </p>
       </div>
     </div>
   );
-}
+};
 export default Global;

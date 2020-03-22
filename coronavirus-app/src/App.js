@@ -4,6 +4,7 @@ import Formulario from "./Components/Formulario/Formulario";
 import Axios from "axios";
 import Error from "./Components/Error";
 import InfoPais from "./Components/InfoPais/InfoPais";
+import Global from "./Components/Global";
 
 function App() {
   //state Principal
@@ -40,10 +41,11 @@ function App() {
     guardarError(false);
   };
 
-  let componente;
+  let componente = <Global />;
   if (error) {
     componente = <Error mensaje="Seleccione país en búsqueda" />;
-  } else {
+  }
+  if (resultado) {
     console.log(resultado);
     componente = <InfoPais resultado={resultado} />;
   }

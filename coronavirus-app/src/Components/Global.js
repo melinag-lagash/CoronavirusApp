@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 
+let letterStyle = { fontFamily: "Georgia" };
+
 const Global = () => {
   const [globalState, setGlobalState] = useState({});
   const [conectado, setConectado] = useState({ conectado: false });
@@ -20,7 +22,7 @@ const Global = () => {
   }, [conectado]);
 
   return (
-    <div className="card-panel white col s12">
+    <div className="card-panel white col s12" style={letterStyle}>
       <div className="black-text">
         <h2>Numero de casos Global:{globalState.cases} </h2>
         <p className="cases"> </p>

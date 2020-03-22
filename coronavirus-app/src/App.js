@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import Header from "./Components/Header/Header";
 import Formulario from "./Components/Formulario/Formulario";
 import Axios from "axios";
@@ -51,20 +51,21 @@ function App() {
   }
 
   return (
-    <div className="App light-blue">
-      <Header titulo="Coronavirus Global" />
-
-      <div className="Contenedor-form ">
-        <div className="container">
-          <div className="row">
-            <div className="col s12 m6">
-              <Formulario datosConsulta={datosConsulta} />
+    <Fragment>
+      <div className="App light-blue" style={{ height: "700px" }}>
+        <Header titulo="Coronavirus Global" />
+        <div className="Contenedor-form " style={{ marginTop: "80px" }}>
+          <div className="container">
+            <div className="row">
+              <div className="col s12 m6">
+                <Formulario datosConsulta={datosConsulta} />
+              </div>
+              <div className="col s12 m6">{componente}</div>
             </div>
-            <div className="col s12 m6">{componente}</div>
           </div>
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 }
 

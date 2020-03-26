@@ -1,10 +1,10 @@
 import React, { useState, useEffect, Fragment } from "react";
-import Header from "./Components/Header/Header";
-import Formulario from "./Components/Formulario/Formulario";
+import Header from "../header/Header";
+import Formulario from "../formulario/Formulario";
 import Axios from "axios";
-import Error from "./Components/Error";
-import InfoPais from "./Components/InfoPais/InfoPais";
-import Global from "./Components/Global";
+import Error from "../error/Error";
+import InfoPais from "../infoPais/InfoPais";
+import Global from "../infoGlobal/Global";
 
 function App() {
   //state Principal
@@ -52,7 +52,7 @@ function App() {
 
   return (
     <Fragment>
-      <div className="App light-blue" style={{ height: "700px" }}>
+      <div className="App grey lighten-4" style={{ height: "800px" }}>
         <Header titulo="Coronavirus Global" />
         <div className="Contenedor-form " style={{ marginTop: "80px" }}>
           <div className="container">

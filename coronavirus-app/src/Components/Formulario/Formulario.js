@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+let letterStyle = { fontFamily: "Arial Narrow" };
 function Formulario({ datosConsulta }) {
   const [busqueda, guardarBusqueda] = useState({
     country: ""
@@ -10,7 +10,6 @@ function Formulario({ datosConsulta }) {
       ...busqueda,
       [e.target.name]: e.target.value
     });
-    console.log("al cambiar pais", busqueda.country);
   };
 
   const consultar = e => {
@@ -21,9 +20,9 @@ function Formulario({ datosConsulta }) {
   return (
     <div>
       <form onSubmit={consultar}>
-        <div className="input-field col s12">
+        <div className="input-field col s12 " style={letterStyle}>
           <select onChange={handleChange} name="country">
-            <option value="">Selecciona un país</option>
+            <option value="">Selecciona un pais</option>
             <option value="China">China</option>
             <option value="Italy">Italia</option>
             <option value="Spain">España</option>
@@ -36,12 +35,11 @@ function Formulario({ datosConsulta }) {
             <option value="Chile">Chile</option>
           </select>
         </div>
-        <div className="input-field col s12">
+        <div className="input-field col s12" style={letterStyle}>
           <input
             type="submit"
-            className="waves-effect waves-light btn-large btn- block yellow accent-4"
+            className="waves-effect waves-light btn-large btn- block grey darken-2"
             value="Buscar Contagios por País"
-            // onClick={buscarData}
           />
         </div>
       </form>

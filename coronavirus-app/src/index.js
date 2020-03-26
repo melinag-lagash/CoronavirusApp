@@ -1,8 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
 import "./index.css";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
+import Container from "../src/containers/container";
 
-ReactDOM.render(<App />, document.getElementById("root"));
-serviceWorker.unregister();
+const target = document.querySelector("#root");
+
+render(<Container />, target);

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 
-let letterStyle = { fontFamily: "Georgia" };
+let letterStyle = { fontFamily: "Arial Narrow" };
 
 const Global = () => {
   const [globalState, setGlobalState] = useState({});
@@ -22,12 +22,14 @@ const Global = () => {
   }, [conectado]);
 
   return (
-    <div className="card-panel white col s12" style={letterStyle}>
-      <div className="black-text">
-        <h2>Numero de casos Global:{globalState.cases} </h2>
-        <p className="cases"> </p>
-        <p> numero de muertes: {globalState.deaths} </p>
-        <p> numero de recuperados: {globalState.recovered} </p>
+    <div className="card blue-grey darken-1" style={letterStyle}>
+      <div className="card-content white-text">
+        <h2>Global covid-19 Data </h2>
+        <p className="cases"> Casos: </p> <p>{globalState.cases} </p>{" "}
+        <p> Muertes:</p>
+        <p className="red-text">{globalState.deaths} </p>
+        <p> Recuperados:</p>{" "}
+        <p className="green-text">{globalState.recovered} </p>{" "}
       </div>
     </div>
   );

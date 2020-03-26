@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 
-let letterStyle = { fontFamily: "Arial Narrow" };
+let letterStyle = { fontFamily: "Arial Narrow", opacity: "0.8" };
 
 const Global = () => {
   const [globalState, setGlobalState] = useState({});

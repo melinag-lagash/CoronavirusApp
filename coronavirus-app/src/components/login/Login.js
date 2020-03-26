@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Container, Grid, Paper, TextField } from "@material-ui/core";
-
+import Header from "../header/Header";
 import useStyles from "./Styles";
 
 const Login = () => {
@@ -30,18 +30,19 @@ const Login = () => {
 
   return (
     <Container className={classes.container} maxWidth={false}>
+      <Header titulo="Coronavirus Global" />
       <Grid className={classes.grid}>
         <Paper className={classes.paper}>
           <TextField
             className={classes.item}
             variant="outlined"
-            label="User"
+            label="Usuario"
             onChange={handleChangeUsername}
           />
           <TextField
             className={classes.item}
             variant="outlined"
-            label="Password"
+            label="Contraseña"
             type="password"
             onChange={handleChangePassword}
           />

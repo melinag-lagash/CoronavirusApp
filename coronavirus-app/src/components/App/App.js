@@ -5,6 +5,7 @@ import Axios from "axios";
 import Error from "../error/Error";
 import InfoPais from "../infoPais/InfoPais";
 import Global from "../infoGlobal/Global";
+import planet from "../resources/earth.jpg";
 
 function App() {
   //state Principal
@@ -52,7 +53,10 @@ function App() {
 
   return (
     <Fragment>
-      <div className="App grey lighten-4" style={{ height: "800px" }}>
+      <div
+        className="App grey lighten-4"
+        style={{ height: "900px", backgroundImage: `url(${planet})` }}
+      >
         <Header titulo="Coronavirus Global" />
         <div className="Contenedor-form " style={{ marginTop: "50px" }}>
           <div className="container">

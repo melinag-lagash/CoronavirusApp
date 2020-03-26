@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-
+import planet from "../resources/earth.jpg";
 const useStyles = makeStyles(theme => ({
   container: {
     paddingLeft: 0,
@@ -7,12 +7,12 @@ const useStyles = makeStyles(theme => ({
   },
   grid: {
     display: "flex",
-    height: "100vh",
+    height: "900px",
     alignItems: "center",
     justifyContent: "center",
-    //backgroundImage: `url(${loginBg})`,
+    backgroundImage: `url(${planet})`,
     [theme.breakpoints.down("md")]: {
-      backgroundPosition: "25% 75%"
+      backgroundPosition: "0% 0%"
     },
     [theme.breakpoints.up("lg")]: {
       backgroundPosition: "center"
@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     maxWidth: 300,
     padding: theme.spacing(4),
-    opacity: 0.9
+    opacity: 0.6
   },
   item: {
     marginBottom: theme.spacing(2),

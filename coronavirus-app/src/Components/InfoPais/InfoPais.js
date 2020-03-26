@@ -25,7 +25,10 @@ function InfoPais({ resultado }) {
     critical = resultado.critical;
   }
   return (
-    <div className="card-panel blue-grey darken-1 col s12 center">
+    <div
+      className="card-panel blue-grey darken-1 col s12 center"
+      style={{ opacity: "0.8" }}
+    >
       <div className="white-text" style={letterStyle}>
         <h2> {pais} </h2>
         <p className="cases"> </p>

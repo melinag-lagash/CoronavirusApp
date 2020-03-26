@@ -33,6 +33,7 @@ function Formulario({ datosConsulta }) {
             <option value="Switzerland">Suiza</option>
             <option value="UK">Reino Unido</option>
             <option value="Chile">Chile</option>
+            <option value="Argentina">Argentina</option>
           </select>
         </div>
         <div className="input-field col s12" style={letterStyle}>

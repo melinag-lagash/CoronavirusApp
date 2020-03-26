@@ -54,7 +54,7 @@ function App() {
     <Fragment>
       <div className="App grey lighten-4" style={{ height: "800px" }}>
         <Header titulo="Coronavirus Global" />
-        <div className="Contenedor-form " style={{ marginTop: "80px" }}>
+        <div className="Contenedor-form " style={{ marginTop: "50px" }}>
           <div className="container">
             <div className="row">
               <div className="col s12 m6">

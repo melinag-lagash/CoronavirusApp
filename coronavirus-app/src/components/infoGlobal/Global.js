@@ -25,11 +25,12 @@ const Global = () => {
     <div className="card blue-grey darken-1" style={letterStyle}>
       <div className="card-content white-text">
         <h2>Global covid-19 Data </h2>
-        <p className="cases"> Casos: </p> <p>{globalState.cases} </p>{" "}
+        <p className="cases"> Casos: </p>
+        <h3>{globalState.cases} </h3>
         <p> Muertes:</p>
-        <p className="red-text">{globalState.deaths} </p>
+        <h3 className="red-text">{globalState.deaths} </h3>
         <p> Recuperados:</p>{" "}
-        <p className="green-text">{globalState.recovered} </p>{" "}
+        <h3 className="green-text">{globalState.recovered} </h3>{" "}
       </div>
     </div>
   );

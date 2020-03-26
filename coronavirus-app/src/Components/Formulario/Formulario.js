@@ -38,7 +38,7 @@ function Formulario({ datosConsulta }) {
         <div className="input-field col s12" style={letterStyle}>
           <input
             type="submit"
-            className="waves-effect waves-light btn-large btn- block grey darken-2"
+            className="waves-effect waves-light btn-large btn- block grey darken-2 "
             value="Buscar Contagios por País"
           />
         </div>
